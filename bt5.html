@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result5"></div>
+    <script>
+        let a=0, b=1, sum=0;
+        for(let i=0; i<20; i++){
+            sum +=a;
+            let next= a + b;
+            a=b;
+            b=next;
+        }
+        document.getElementById("result5").innerHTML="Tổng 20 số Fib đầu tiên: " + sum;
+    </script>
+</body>
+</html>

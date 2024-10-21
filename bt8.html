@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="play">Bắt đầu</button>
+    <script>
+        document.getElementById("play").addEventListener('click',function(){;
+        let num= parseInt(prompt("Nhập số bạn chọn"));
+        let rdNum= Math.floor(Math.random()*(num +1));
+        let guess;
+        let atp=0;
+        let maxAtp=3;
+
+        while(atp<maxAtp){
+            guess= parseInt(prompt("Nhập số bạn đoán"));
+            atp++;
+            if(guess===rdNum){
+                alert("Chúc mừng bạn đã đoán đúng số" );
+                break;
+            }else if(guess>rdNum){
+                alert("Số bạn chọn lớn hơn. Hãy thử lại!" );
+            }else{
+                alert("Số bạn chọn nhỏ hơn. Hãy thử lại!" );
+            }
+        }if(atp===maxAtp){
+            alert("Bạn đã hết số lần dự đoán!! Số đúng = " + rdNum);
+        }
+        })    
+    </script>
+</body>
+</html>

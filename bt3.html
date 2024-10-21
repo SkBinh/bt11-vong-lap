@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result3"></div>
+    <script>
+        let a = 0, b = 1, fib="";
+        for(let i=0; i<20; i++){
+            fib += a + "<br>";
+            let next = a + b;
+            a=b;
+            b= next;
+        }
+        document.getElementById("result3").innerHTML= fib;
+    </script>
+</body>
+</html>

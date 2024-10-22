@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center; padding: 50px">
+      <div id="heart"></div>
+    </div>
+    <script>
+      let heart = "<table >";
+      let h = parseInt(prompt("nhập vào chiều cao trái tim:(>6)"));
+      for (let x = 0; x < h; x++) {
+        heart += "<tr>";
+        for (let y = 0; y <= h; y++) {
+          if (x < h / 2) {
+            if (
+              x + y < h / 4 ||
+              y - x > (h * 3) / 4 ||
+              (y - x > h / 4 && y - x < (h * 3) / 4 && y + x < (h * 3) / 4)
+            ) {
+              heart += '<td width="20px">' + "</td>";
+            } else {
+              heart += '<td width="20px" style="color: red">' + "*" + "</td>";
+            }
+          } else {
+            if (x - y > h / 2 - ((h - 1) % 2) || y + x >= (3 * h) / 2) {
+              heart += '<td width="20px">' + "</td>";
+            } else {
+              heart += '<td width="20px" style="color: red">' + "*" + "</td>";
+            }
+          }
+        }
+        heart += "</tr>";
+      }
+      heart += "</table>";
+      document.getElementById("heart").innerHTML = heart;
+    </script>
+  </body>
+</html>

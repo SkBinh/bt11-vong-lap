@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result1"></div>
+    <script>
+        let a=0, b=1, count=2;
+        let n= parseInt(prompt("Nhập số lượng số Fibonancci cần in: "));
+
+        document.getElementById("result1").innerHTML = a + " " + b + " ";
+
+        while(count<n){
+            let c= a+b;
+            document.getElementById("result1").innerHTML+= c +" ";
+            a=b;
+            b=c;
+            count++;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Hình Chữ Nhật Rỗng</title>
+</head>
+<body>
+    <pre id="result4"></pre>
+    <script>
+        let width = 15;
+        let height = 5; 
+        let result4 = "";
+
+        for (let i = 0; i < height; i++) {
+            if (i === 0 || i === height -1) {
+                result4 += "*".repeat(width) + "\n";
+            } else {
+                result4 += "*" + " ".repeat(width - 2) + "*" + "\n";
+            }
+        }
+        document.getElementById("result4").innerText = result4; 
+    </script>
+</body>
+</html>
+
+    
+</body>
+</html>

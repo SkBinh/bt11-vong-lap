@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="soTien" placeholder="Số Tiền">
+    <input type="number" id="soThang" placeholder="Số Tháng">
+    <input type="number" id="laisuat" placeholder="Lãi suất (%)">
+    <button type="button" onclick="tinh()">Tính</button>
+    <p id="result5"></p>
+
+    <script>
+    function tinh(){
+        let money= parseInt(document.getElementById("soTien").value);
+        let month= parseFloat(document.getElementById("soThang").value);
+        let rate= parseFloat(document.getElementById("laisuat").value) /100;
+        let kq=money;
+
+        for(let i=0; i<month; i++){
+            kq+= kq*rate;
+        }
+        document.getElementById("result5").innerHTML="Tổng tiền sau "+ month + " tháng là "+ kq;
+    }
+    </script>
+</body>
+</html>

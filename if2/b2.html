@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result2"></div>
+    <script>
+        let num= parseInt(prompt("Nhập số nguyên dương: "));
+        let n=1;
+
+        for(let i=1; i<=num; i++){
+            n *=i;
+        }
+        document.getElementById("result2").innerHTML="Giai thừa của " + num + " là " + n;
+    </script>
+</body>
+</html>
